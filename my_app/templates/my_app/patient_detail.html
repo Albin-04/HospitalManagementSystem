@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Details</title>
+</head>
+<body>
+    <h2>Patient Detail</h2>
+    <p><strong>Name:</strong> {{ patient.name }}</p>
+    <p><strong>Age:</strong> {{ patient.age }}</p>
+    <p><strong>Gender:</strong> {{ patient.gender }}</p>
+    <p><strong>Contact:</strong> {{ patient.contact }}</p>
+    <p><strong>Address:</strong> {{ patient.address }}</p>
+
+    <a href="{% url 'patient_list' %}">Back to List</a>
+</body>
+</html>

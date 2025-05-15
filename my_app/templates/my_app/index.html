@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediTrack</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ffdd00;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        .start-btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .start-btn:hover {
+            box-shadow: 0 0 20px #00c6ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to MediTrack</h1>
+    <p>Your digital hospital management companion</p>
+    <a href="{% url 'login' %}" class="start-btn">Start Managing Now</a>
+</body>
+</html>

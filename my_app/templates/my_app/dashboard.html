@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - MediTrack</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background: #1a1a1a;
+            height: 100vh;
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .sidebar h2 {
+            color: #00c6ff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #bbb;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #2b2b2b;
+            color: #ffdd00;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 220px;
+            padding: 40px;
+            width: 100%;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            color: #00c6ff;
+            margin-bottom: 10px;
+        }
+
+        .logout-btn {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.5);
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .logout-btn:hover {
+            box-shadow: 0 0 25px rgba(255, 75, 43, 0.9);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>MediTrack</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'patient_list' %}">Patients</a>
+        <a href="{% url 'add_patient' %}">Add Patient</a>
+        <a href="{% url 'doctor_list' %}">Doctors</a>
+        <a href="{% url 'add_doctor' %}">Add Doctor</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        <h1>Welcome to MediTrack Dashboard</h1>
+        <p>Use the navigation menu on the left to manage your hospital data efficiently and securely.</p>
+    </div>
+
+</body>
+</html>
